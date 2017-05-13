@@ -1,9 +1,16 @@
 package moscvarium.models.network.response.resp2;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 /**
  * Created by xTazy on 5/10/17.
  */
+@JacksonXmlRootElement(localName = "data")
 public class ResponseGetTicketListFromBasket {
+    @JacksonXmlProperty(localName = "basket")
+    @JacksonXmlElementWrapper(useWrapping = false)
     private Basket basket;
 
     public Basket getBasket() {
@@ -19,11 +26,16 @@ public class ResponseGetTicketListFromBasket {
         return "ClassPojo [basket = " + basket + "]";
     }
 
-
     public class Basket {
+        @JacksonXmlProperty(localName = "count")
         private String count;
+        @JacksonXmlProperty(localName = "typepay")
+        @JacksonXmlElementWrapper(useWrapping = false)
         private Typepay typepay;
+        @JacksonXmlProperty(localName = "spectcale")
+        @JacksonXmlElementWrapper(useWrapping = false)
         private Spectcale spectcale;
+        @JacksonXmlProperty(localName = "cost")
         private String cost;
 
         public String getCount() {
@@ -66,9 +78,14 @@ public class ResponseGetTicketListFromBasket {
 
 
     public class Spectcale {
+        @JacksonXmlProperty(localName = "time")
         private String time;
+        @JacksonXmlProperty(localName = "b_ticket")
+        @JacksonXmlElementWrapper(useWrapping = false)
         private B_ticket b_ticket;
+        @JacksonXmlProperty(localName = "name")
         private String name;
+        @JacksonXmlProperty(localName = "date")
         private String date;
 
         public String getTime() {
@@ -110,8 +127,11 @@ public class ResponseGetTicketListFromBasket {
     }
 
     public class B_ticket {
+        @JacksonXmlProperty(localName = "price")
         private String price;
+        @JacksonXmlProperty(localName = "tid")
         private String tid;
+        @JacksonXmlProperty(localName = "place")
         private String place;
 
         public String getPrice() {
@@ -146,7 +166,9 @@ public class ResponseGetTicketListFromBasket {
 
 
     public class Typepay {
+        @JacksonXmlProperty(localName = "name")
         private String name;
+        @JacksonXmlProperty(localName = "pay")
         private String pay;
 
         public String getName() {

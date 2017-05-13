@@ -1,5 +1,6 @@
 package moscvarium.models.network.response.resp2;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -7,7 +8,8 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 /**
  * Created by xTazy on 5/10/17.
  */
-@JacksonXmlRootElement(localName = "SalesReport")
+@JacksonXmlRootElement(localName = "data")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ResponseGetSalesReport {
     @JacksonXmlProperty(localName = "sales_report")
     @JacksonXmlElementWrapper(useWrapping = false)

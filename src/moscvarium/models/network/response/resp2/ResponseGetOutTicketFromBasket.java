@@ -6,7 +6,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 /**
  * Created by xTazy on 5/10/17.
  */
-@JacksonXmlRootElement(localName = "OutTicketFromBasket")
+@JacksonXmlRootElement(localName = "data")
 public class ResponseGetOutTicketFromBasket {
     @JacksonXmlProperty(localName = "res_count")
     private String res_count;

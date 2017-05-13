@@ -1,10 +1,16 @@
 package moscvarium.models.network.response.resp2;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 /**
  * Created by xTazy on 5/10/17.
  */
+@JacksonXmlRootElement(localName = "data")
 public class ResponseSetPayment {
+    @JacksonXmlProperty(localName = "IdPayment")
     private String IdPayment;
+    @JacksonXmlProperty(localName = "PaySum")
     private String PaySum;
 
     public String getIdPayment ()

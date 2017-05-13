@@ -7,7 +7,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 /**
  * Created by xTazy on 5/10/17.
  */
-@JacksonXmlRootElement(localName = "OrderInfo")
+@JacksonXmlRootElement(localName = "data")
 public class ResponseGetOrderInfo {
     @JacksonXmlProperty(localName = "nstate")
     private String nstate;

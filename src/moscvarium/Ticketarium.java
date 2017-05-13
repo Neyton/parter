@@ -1,8 +1,7 @@
 package moscvarium;
 
 import moscvarium.models.network.request2.RequestBase;
-import moscvarium.models.network.request2.RequestGetSpecList;
-import moscvarium.models.network.response.resp2.ResponseGetSpecList;
+import moscvarium.models.network.request2.RequestFGetSpecChangedList;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
@@ -20,7 +19,8 @@ public class Ticketarium {
     private String getHash() {
         try {
             Requester requester = new Requester("http://api.bil24.ru:1290/test/index.php/");
-            Object html = requester.getHTML(this.buildURL(new RequestGetSpecList("1", "2017")), ResponseGetSpecList.class);
+            Object html = requester.getHTML(this.buildURL(new RequestFGetSpecChangedList("12.1.2017", "15")), Object.class);
+            System.out.println(html);
         } catch (Exception e) {
             e.printStackTrace();
         }

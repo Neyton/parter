@@ -1,9 +1,16 @@
 package moscvarium.models.network.response.resp2;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 /**
  * Created by xTazy on 5/10/17.
  */
+@JacksonXmlRootElement(localName = "data")
 public class ResponseGetSpecFreePlace {
+    @JacksonXmlProperty(localName = "spec_free_place_pict")
+    @JacksonXmlElementWrapper(useWrapping = false)
     private Spec_free_place_pict spec_free_place_pict;
 
     public Spec_free_place_pict getSpec_free_place_pict() {
@@ -20,7 +27,12 @@ public class ResponseGetSpecFreePlace {
     }
 
     public class Spec_free_place_pict {
+        @JacksonXmlProperty(localName = "ticket")
+        @JacksonXmlElementWrapper(useWrapping = false)
         private Ticket[] ticket;
+
+        @JacksonXmlProperty(localName = "spectacle_info")
+        @JacksonXmlElementWrapper(useWrapping = false)
         private Spectacle_info spectacle_info;
 
         public Ticket[] getTicket() {
@@ -46,13 +58,21 @@ public class ResponseGetSpecFreePlace {
     }
 
     public class Spectacle_info {
+        @JacksonXmlProperty(localName = "Name")
         private String Name;
+        @JacksonXmlProperty(localName = "id")
         private String id;
+        @JacksonXmlProperty(localName = "time")
         private String time;
+        @JacksonXmlProperty(localName = "hall")
         private String hall;
+        @JacksonXmlProperty(localName = "IdHall")
         private String IdHall;
+        @JacksonXmlProperty(localName = "date")
         private String date;
+        @JacksonXmlProperty(localName = "type")
         private String type;
+        @JacksonXmlProperty(localName = "tarif")
         private String tarif;
 
         public String getName() {
@@ -126,16 +146,27 @@ public class ResponseGetSpecFreePlace {
     }
 
     public class Ticket {
+        @JacksonXmlProperty(localName = "ycoord")
         private String ycoord;
+        @JacksonXmlProperty(localName = "trowmetric")
         private String trowmetric;
+        @JacksonXmlProperty(localName = "xcoord")
         private String xcoord;
+        @JacksonXmlProperty(localName = "tprice")
         private String tprice;
+        @JacksonXmlProperty(localName = "trow")
         private String trow;
+        @JacksonXmlProperty(localName = "tplacemetric")
         private String tplacemetric;
+        @JacksonXmlProperty(localName = "tregion")
         private String tregion;
+        @JacksonXmlProperty(localName = "tplace")
         private String tplace;
+        @JacksonXmlProperty(localName = "pid")
         private String pid;
+        @JacksonXmlProperty(localName = "tid")
         private String tid;
+        @JacksonXmlProperty(localName = "tside")
         private String tside;
 
         public String getYcoord() {

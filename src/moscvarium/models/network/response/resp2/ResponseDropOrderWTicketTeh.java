@@ -7,7 +7,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 /**
  * Created by xTazy on 5/10/17.
  */
-@JacksonXmlRootElement(localName = "DropOrderWTicketTeh")
+@JacksonXmlRootElement(localName = "data")
 public class ResponseDropOrderWTicketTeh {
     @JacksonXmlProperty(localName = "return_res")
     @JacksonXmlElementWrapper(useWrapping = false)

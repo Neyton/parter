@@ -1,10 +1,20 @@
 package moscvarium.models.network.response.resp2;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 /**
  * Created by xTazy on 5/10/17.
  */
+@JacksonXmlRootElement(localName = "data")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ResponseGetTicketForNewOrder {
+    @JacksonXmlProperty(localName = "idorders")
     private String idorders;
+    @JacksonXmlProperty(localName = "Tickets")
+    @JacksonXmlElementWrapper(useWrapping = false)
     private Tickets Tickets;
 
     public String getIdorders() {
@@ -29,6 +39,7 @@ public class ResponseGetTicketForNewOrder {
     }
 
     public class Tickets {
+        @JacksonXmlProperty(localName = "IdTicketOperation")
         private String IdTicketOperation;
 
         public String getIdTicketOperation() {
