@@ -1,9 +1,16 @@
 package moscvarium.models.network.response.resp2;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 /**
  * Created by xTazy on 5/10/17.
  */
+@JacksonXmlRootElement(localName = "DropOrderWTicketTeh")
 public class ResponseDropOrderWTicketTeh {
+    @JacksonXmlProperty(localName = "return_res")
+    @JacksonXmlElementWrapper(useWrapping = false)
     private Return_res return_res;
 
     public Return_res getReturn_res() {
@@ -20,6 +27,8 @@ public class ResponseDropOrderWTicketTeh {
     }
 
     public class Return_res {
+        @JacksonXmlProperty(localName = "ticket")
+        @JacksonXmlElementWrapper(useWrapping = false)
         private Ticket ticket;
 
         public Ticket getTicket() {
@@ -37,8 +46,11 @@ public class ResponseDropOrderWTicketTeh {
     }
 
     public class Ticket {
+        @JacksonXmlProperty(localName = "result")
         private String result;
+        @JacksonXmlProperty(localName = "idt")
         private String idt;
+        @JacksonXmlProperty(localName = "ido")
         private String ido;
 
         public String getResult() {

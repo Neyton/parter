@@ -1,10 +1,16 @@
 package moscvarium.models.network.response.resp2;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 /**
  * Created by xTazy on 5/10/17.
  */
+@JacksonXmlRootElement(localName = "SalesReport")
 public class ResponseGetSalesReport {
-
+    @JacksonXmlProperty(localName = "sales_report")
+    @JacksonXmlElementWrapper(useWrapping = false)
     private Sales_report sales_report;
 
     public Sales_report getSales_report() {
@@ -21,6 +27,8 @@ public class ResponseGetSalesReport {
     }
 
     public class Sales_report {
+        @JacksonXmlProperty(localName = "spectacle")
+        @JacksonXmlElementWrapper(useWrapping = false)
         private Spectacle spectacle;
 
         public Spectacle getSpectacle() {
@@ -38,7 +46,10 @@ public class ResponseGetSalesReport {
     }
 
     public class Spectacle {
+        @JacksonXmlProperty(localName = "id")
         private String id;
+        @JacksonXmlProperty(localName = "ticket")
+        @JacksonXmlElementWrapper(useWrapping = false)
         private Ticket[] ticket;
 
         public String getId() {
@@ -64,8 +75,11 @@ public class ResponseGetSalesReport {
     }
 
     public class Ticket {
+        @JacksonXmlProperty(localName = "price")
         private String price;
+        @JacksonXmlProperty(localName = "saletime")
         private String saletime;
+        @JacksonXmlProperty(localName = "ticketid")
         private String ticketid;
 
         public String getPrice() {

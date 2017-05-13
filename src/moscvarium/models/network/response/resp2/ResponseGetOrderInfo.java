@@ -1,20 +1,38 @@
 package moscvarium.models.network.response.resp2;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 /**
  * Created by xTazy on 5/10/17.
  */
+@JacksonXmlRootElement(localName = "OrderInfo")
 public class ResponseGetOrderInfo {
+    @JacksonXmlProperty(localName = "nstate")
     private String nstate;
+    @JacksonXmlProperty(localName = "key_order")
     private String key_order;
+    @JacksonXmlProperty(localName = "createtime")
     private String createtime;
+    @JacksonXmlProperty(localName = "canceltime")
     private String canceltime;
+    @JacksonXmlProperty(localName = "print_button")
     private String print_button;
+    @JacksonXmlProperty(localName = "status")
     private String status;
+    @JacksonXmlProperty(localName = "order_state")
     private String order_state;
+    @JacksonXmlProperty(localName = "typepay")
     private String typepay;
+    @JacksonXmlProperty(localName = "number")
     private String number;
+    @JacksonXmlProperty(localName = "spectcale")
+    @JacksonXmlElementWrapper(useWrapping = false)
     private Spectcale spectcale;
+    @JacksonXmlProperty(localName = "ticket_count")
     private String ticket_count;
+    @JacksonXmlProperty(localName = "order_price")
     private String order_price;
 
     public String getNstate() {
@@ -120,9 +138,14 @@ public class ResponseGetOrderInfo {
 
 
     public class Spectcale {
+        @JacksonXmlProperty(localName = "time")
         private String time;
+        @JacksonXmlProperty(localName = "o_ticket")
+        @JacksonXmlElementWrapper(useWrapping = false)
         private O_ticket o_ticket;
+        @JacksonXmlProperty(localName = "name")
         private String name;
+        @JacksonXmlProperty(localName = "date")
         private String date;
 
         public String getTime() {
@@ -164,9 +187,13 @@ public class ResponseGetOrderInfo {
     }
 
     public class O_ticket {
+        @JacksonXmlProperty(localName = "price")
         private String price;
+        @JacksonXmlProperty(localName = "number")
         private String number;
+        @JacksonXmlProperty(localName = "PlaceState")
         private String PlaceState;
+        @JacksonXmlProperty(localName = "decription")
         private String decription;
 
         public String getPrice() {
