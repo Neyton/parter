@@ -24,7 +24,7 @@ public class Requester {
         StringBuilder result = new StringBuilder();
         Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("189.203.172.82", 8080));
         URL url = new URL(this.BaseUrl + urlToRead);
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection(proxy);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream(),"Windows-1251"));
         String line;
@@ -32,7 +32,7 @@ public class Requester {
             result.append(line);
         }
         rd.close();
-        JSONObject xmlJSONObj = XML.toJSONObject(TEST_XML_STRING);
+//        JSONObject xmlJSONObj = XML.toJSONObject(TEST_XML_STRING);
         return xmlMapper.readValue(result.toString(), resultType);
     }
 }
