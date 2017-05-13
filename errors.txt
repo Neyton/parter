@@ -1,0 +1,95 @@
+39000	Ошибка в tl_get_session - не найден пользователь
+39001	Ошибка в tl_get_session - не определен владелец учреждения
+39002	Ошибка в tl_get_session - не найден компьютер пользователя
+39003	Ошибка в tl_get_session - при определении времени начала смены
+39004	Ошибка в tl_get_session - при закрытии смены
+39005	Ошибка в tl_get_session - при создании смены
+39006	Ошибка в tl_get_session - при обновлении смены пользователя
+39007	Ошибка в tl_get_session - при создании смены(1)
+39008	Ошибка в tl_get_session - при обновлении смены пользователя(1)
+39009	Ошибка в tl_get_session - при создании записи в ActUsrCnt
+40000	Ошибка в tl_convert_params - при вызове tl_get_session
+40001	Ошибка в tl_convert_params - при преобразовании IdClient
+40002	Ошибка в tl_convert_params - не найден клиент
+40003	Ошибка в tl_convert_params - при преобразовании DateTime
+40004	Ошибка в tl_convert_params - при преобразовании DateTime2
+40005	Ошибка в tl_convert_params - при преобразовании IdPerformance
+40006	Ошибка в tl_convert_params - не найдено мероприятие
+40007	Ошибка в tl_convert_params - при преобразовании IdPriceCategory
+40008	Ошибка в tl_convert_params - неверно указан тариф
+40009	Ошибка в tl_convert_params - при преобразовании IdOrder
+40010	Ошибка в tl_convert_params - заказ не найден
+40011	Ошибка в tl_convert_params - заказ создан на другого клиента
+40012	Ошибка в tl_convert_params - при преобразовании IdTicketOperation
+40013	Ошибка в tl_convert_params - при преобразовании Ticket Number
+37000	Ошибка в tl_sale_place - истек срок продажи билетов
+37014	Ошибка в tl_sale_place - заказ не может быть реализован. Статус заказа = %1!
+37002	Ошибка в tl_sale_place - при регистрации продажи
+37004	Ошибка в tl_sale_place - при обновлении журнала бронирования
+37003	Ошибка в tl_sale_place - при EXT-регистрации продажи
+37005	Ошибка в tl_sale_place - при обновлении заказа
+37006	Ошибка в tl_sale_place - при обновлении статуса места
+37007	Ошибка в tl_sale_place - при вызове OrderGetSum
+37008	Ошибка в tl_sale_place - при определении параметров платежа
+37009	Ошибка в tl_sale_place - при регистрации платежа
+37010	Ошибка в tl_sale_place - при обновлении заказа
+37011	Ошибка в tl_sale_place - при вызове ReduceBalance
+37012	Ошибка в tl_sale_place - при вызове IncreaseAccSkidka
+37013	Ошибка в tl_sale_place - при вызове OrderGetSum (1)
+37015	Ошибка в tl_sale_place - при вызове SetOrderStateTo
+38000	Ошибка в tl_drop_places - при сбросе просроченных мест
+51000	Ошибка в tl_get_order_info - не указан клиент
+51001	Ошибка в tl_get_order_info - не указан заказ
+51002	Ошибка в tl_get_order_info - при вызове tl_convert_params
+55000	Ошибка в tl_get_out_ticket_from_basket - не указан клиент
+55001	Ошибка в tl_get_out_ticket_from_basket - не указаны номера билетов
+55002	Ошибка в tl_get_out_ticket_from_basket - при вызове tl_convert_params
+55003	Ошибка в tl_get_out_ticket_from_basket - при освобождении выбранного места
+44000	Ошибка в tl_get_spec_free_place - не указан спектакль
+44001	Ошибка в tl_get_spec_free_place - не указан тариф
+44002	Ошибка в tl_get_spec_free_place - не указан клиент
+44003	Ошибка в tl_get_spec_free_place - при вызове tl_convert_params
+44004	Ошибка в tl_get_spec_free_place - при вызове tl_drop_places
+44005	Ошибка в tl_get_spec_free_place - при определении параметров тарифа
+44006	Ошибка в tl_get_spec_free_place - при получении данных
+43000	Ошибка в tl_get_spec_list - параметр @Month задан неверно
+43001	Ошибка в tl_get_spec_list - при получении списка мероприятий
+47000	Ошибка в tl_get_ticket_for_new_order - не указан клиент
+47001	Ошибка в tl_get_ticket_for_new_order - не задан набор мест
+47002	Ошибка в tl_get_ticket_for_new_order - при вызове tl_convert_params
+47003	Ошибка в tl_get_ticket_for_new_order - при вызове AddOrder
+47006	Ошибка в tl_get_ticket_for_new_order - при добавлении мест в заказ
+47007	Ошибка в tl_get_ticket_for_new_order - при снятии выбранных мест
+47008	Ошибка в tl_get_ticket_for_new_order - при вызове tl_sale_place
+47009	Ошибка в tl_get_ticket_for_new_order - Место/места в уже распечатанных/аннулированных заказах
+45000	Ошибка в tl_get_ticket_into_basket - не указан клиент
+45001	Ошибка в tl_get_ticket_into_basket - не указан номер билета
+45002	Ошибка в tl_get_ticket_into_basket - не указан тариф
+45003	Ошибка в tl_get_ticket_into_basket - при вызове tl_convert_params
+46000	Ошибка в tl_get_ticket_list_from_basket - не указан клиент
+46001	Ошибка в tl_get_ticket_list_from_basket - при вызове tl_convert_params
+46002	Ошибка в tl_get_ticket_list_from_basket - при вызове tl_drop_places
+46003	Ошибка в tl_get_ticket_list_from_basket - при создании временной таблицы
+46004	Ошибка в tl_get_ticket_list_from_basket - при отборе данных во временную таблицу
+46005	Ошибка в tl_get_ticket_list_from_basket - при выводе итоговых данных
+48000	Ошибка в tl_sale_order - не указан клиент
+48001	Ошибка в tl_sale_order - не указан заказ
+48002	Ошибка в tl_sale_order - при вызове tl_convert_params
+48003	Ошибка в tl_sale_order - при попытке заблокировать заказ
+48004	Ошибка в tl_sale_order - при вызове tl_sale_places
+44402	Ошибка в tl_get_spec_changed_list - не указан клиент
+44403	Ошибка в tl_drop_places_ext - при вызове tl_convert_params
+54000	Ошибка в m_drop_order_w_ticket_teh - не указан клиент
+54002	Ошибка в tl_drop_order_w_ticket_teh - при вызове m_convert_params
+54003	Ошибка в tl_drop_order_w_ticket_teh - при проверке доступности возврата
+54004	Ошибка в tl_drop_order_w_ticket_teh - при вызове TicketReturn
+54005	Ошибка в tl_drop_order_w_ticket_teh - при установке статуса заказа
+54006	Ошибка в tl_drop_order_w_ticket_teh - при сбросе мест из заказа
+54007	Ошибка в tl_drop_order_w_ticket_teh - при сбросе мест из заказа(1)
+54008	Ошибка в tl_drop_order_w_ticket_teh - при логировании изменения заказа
+44502	Ошибка в tl_get_sales_report - не указан клиент
+44503	Ошибка в tl_drop_places_ext - при вызове tl_convert_params
+53000	Ошибка в tl_cancel_order - не указан клиент
+53001	Ошибка в tl_cancel_order - не указан заказ
+53002	Ошибка в tl_cancel_order - при вызове tl_convert_params
+56000	Ошибка в tl_cancel_order - при вызове tl_convert_params
