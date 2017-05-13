@@ -14,14 +14,14 @@ public class RequestFGetSpecChangedList extends RequestBase {
     public RequestFGetSpecChangedList(@NotNull String dt, @NotNull String idc) {
         super(parametersEnum.PART.toString(), parametersEnum.ACTION.toString());
         this.getParameters().put(parametersEnum.DATE.toString(), dt);
-        this.getParameters().put(parametersEnum.IDCLIENT.toString(), idc);
+        this.getParameters().put(parametersEnum.CLIENT_ID.toString(), idc);
     }
 
     protected enum parametersEnum {
         PART("performance"),
         ACTION("get_spec_changed_list"),
         DATE("dt"),
-        IDCLIENT("idc");
+        CLIENT_ID("idc");
 
         private String value;
 

@@ -13,7 +13,7 @@ public class RequestFGetSpecFreePlace extends RequestBase {
         super(parametersEnum.PART.toString(), parametersEnum.ACTION.toString());
         this.getParameters().put(parametersEnum.IDSPEC.toString(), ids);
         this.getParameters().put(parametersEnum.TARIF.toString(), tarif);
-        this.getParameters().put(parametersEnum.IDCLIENT.toString(), idc);
+        this.getParameters().put(parametersEnum.CLIENT_ID.toString(), idc);
     }
 
     protected enum parametersEnum {
@@ -21,7 +21,7 @@ public class RequestFGetSpecFreePlace extends RequestBase {
         ACTION("get_spec_free_place"),
         IDSPEC("ids"),
         TARIF("tarif"),
-        IDCLIENT("idc");
+        CLIENT_ID("idc");
 
         private String value;
 
